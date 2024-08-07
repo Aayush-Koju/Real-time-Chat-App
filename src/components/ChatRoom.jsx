@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ChatRoom.css";
+import NavBar from "./NavBar";
 
 export default function ChatRoom() {
   const [search, setSearch] = useState("");
@@ -19,6 +20,7 @@ export default function ChatRoom() {
 
   return (
     <>
+      <NavBar></NavBar>
       <h1>Chat Room Page</h1>
       <div className="search-chatroom">
         <input

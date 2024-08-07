@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar.jsx";
+
 export default function Home() {
   return (
     <>
+      <NavBar></NavBar>
       <h1>Welcome to the Real-time Chat Application</h1>
       <p>Your one step destination for real-time chatting</p>
 
