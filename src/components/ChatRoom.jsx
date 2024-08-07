@@ -35,6 +35,7 @@ export default function ChatRoom() {
           <div key={index} className="room">
             <h3>{room.name}</h3>
             <p>Category: {room.category}</p>
+            <button>Join</button>
           </div>
         ))}
       </div>
