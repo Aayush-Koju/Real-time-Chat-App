@@ -1,0 +1,22 @@
+body {
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 20px 0;
+    
+}
+
+ul li {
+    margin: 15px;
+    list-style-type: none;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul li a {
+    color: black;
+}

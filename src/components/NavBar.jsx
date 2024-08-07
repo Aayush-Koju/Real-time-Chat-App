@@ -3,6 +3,7 @@ import Home from "./Home";
 import ChatRoom from "./ChatRoom";
 import UserProfile from "./UserProfile";
 import Settings from "./Settings";
+import "./NavBar.css";
 
 function NavBar() {
   return (
