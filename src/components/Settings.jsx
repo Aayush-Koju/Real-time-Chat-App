@@ -1,10 +1,27 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import NavBar from "./NavBar";
 import "./Settings.css";
 import { UserContext } from "./UserContext";
 
 export default function Settings() {
-  const { userData, setUserData } = useContext(UserContext);
+  const {
+    userData,
+    setUserData,
+    name,
+    setName,
+    age,
+    setAge,
+    address,
+    setAddress,
+  } = useContext(UserContext);
+
+  useEffect(() => {
+    if (userData.length !== 0) {
+      setName(userData[0].name);
+      setAge(userData[0].age);
+      setAddress(userData[0].address);
+    }
+  }, [userData, setName, setAge, setAddress]);
 
   const handleChangeName = (e) => {
     setUserData({ ...userData, name: e.target.value });
@@ -26,25 +43,13 @@ export default function Settings() {
         <p>Update your credentials</p>
         <form className="update">
           <label>Name</label>
-          <input
-            type="text"
-            value={userData.name}
-            onChange={handleChangeName}
-          />
+          <input type="text" value={name} onChange={handleChangeName} />
 
           <label>Age</label>
-          <input
-            type="number"
-            value={userData.age}
-            onChange={handleChangeAge}
-          />
+          <input type="number" value={age} onChange={handleChangeAge} />
 
           <label>Address</label>
-          <input
-            type="text"
-            value={userData.address}
-            onChange={handleChangeAddress}
-          />
+          <input type="text" value={address} onChange={handleChangeAddress} />
 
           <button>Save</button>
         </form>
