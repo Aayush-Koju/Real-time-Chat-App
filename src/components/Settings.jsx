@@ -1,39 +1,29 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import "./Settings.css";
 import { UserContext } from "./UserContext";
 
 export default function Settings() {
-  const {
-    userData,
-    setUserData,
-    name,
-    setName,
-    age,
-    setAge,
-    address,
-    setAddress,
-  } = useContext(UserContext);
+  const { userData, setUserData } = useContext(UserContext);
+
+  const [settingsName, setSettingsName] = useState("");
+  const [settingsAge, setSettingsAge] = useState("");
+  const [settingsAddress, setSettingsAddress] = useState("");
 
   useEffect(() => {
     if (userData.length !== 0) {
-      setName(userData[0].name);
-      setAge(userData[0].age);
-      setAddress(userData[0].address);
+      setSettingsName(userData[0].name);
+      setSettingsAge(userData[0].age);
+      setSettingsAddress(userData[0].address);
     }
-  }, [userData, setName, setAge, setAddress]);
+  }, [userData]);
 
-  const handleChangeName = (e) => {
-    setUserData({ ...userData, name: e.target.value });
+  const updateDetails = (e) => {
+    e.preventDefault();
+    if (userData.length !== 0)
+      setUserData({ settingsName, settingsAge, settingsAddress });
   };
 
-  const handleChangeAge = (e) => {
-    setUserData({ ...userData, age: e.target.value });
-  };
-
-  const handleChangeAddress = (e) => {
-    setUserData({ ...userData, address: e.target.value });
-  };
   return (
     <>
       <NavBar></NavBar>
@@ -41,17 +31,29 @@ export default function Settings() {
       <div className="profile-settings">
         <h2>Profile Settings</h2>
         <p>Update your credentials</p>
-        <form className="update">
+        <form onSubmit={updateDetails} className="update">
           <label>Name</label>
-          <input type="text" value={name} onChange={handleChangeName} />
+          <input
+            type="text"
+            value={settingsName}
+            onChange={(e) => setSettingsName(e.target.value)}
+          />
 
           <label>Age</label>
-          <input type="number" value={age} onChange={handleChangeAge} />
+          <input
+            type="number"
+            value={settingsAge}
+            onChange={(e) => setSettingsAge(e.target.value)}
+          />
 
           <label>Address</label>
-          <input type="text" value={address} onChange={handleChangeAddress} />
+          <input
+            type="text"
+            value={settingsAddress}
+            onChange={(e) => setSettingsAddress(e.target.value)}
+          />
 
-          <button>Save</button>
+          <button type="submit">Save</button>
         </form>
       </div>
 
