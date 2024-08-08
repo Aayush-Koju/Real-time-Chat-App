@@ -7,6 +7,7 @@ export const UserProvider = ({ children }) => {
   const [age, setAge] = useState("");
   const [address, setAddress] = useState("");
   const [userData, setUserData] = useState([]);
+  const [listen, setListen] = useState(false);
 
   const registerUser = (e) => {
     e.preventDefault();
@@ -28,6 +29,8 @@ export const UserProvider = ({ children }) => {
         setAddress,
         userData,
         registerUser,
+        listen,
+        setListen,
       }}
     >
       {children}

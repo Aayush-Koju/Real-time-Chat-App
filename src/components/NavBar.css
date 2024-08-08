@@ -1,15 +1,16 @@
-body {
+.nav-bar {
+    position: sticky;
     align-items: center;
 }
 
-ul {
+.nav-bar ul {
     display: flex;
-    padding: 0;
-    margin: 20px 0;
-    
+    padding: 0;  
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-ul li {
+.nav-bar ul li {
     margin: 15px;
     list-style-type: none;
     position: relative;
@@ -17,6 +18,10 @@ ul li {
     border-radius: 5px;
 }
 
-ul li a {
+.nav-bar ul li a {
     color: black;
+}
+
+.nav-bar a:hover {
+    color: #ddd;
 }

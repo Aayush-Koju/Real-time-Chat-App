@@ -4,7 +4,7 @@ import "./Settings.css";
 import { UserContext } from "./UserContext";
 
 export default function Settings() {
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData, setUserData, listen, setListen } = useContext(UserContext);
 
   const [settingsName, setSettingsName] = useState("");
   const [settingsAge, setSettingsAge] = useState("");
@@ -24,6 +24,7 @@ export default function Settings() {
       setUserData({ settingsName, settingsAge, settingsAddress });
   };
 
+  console.log(listen);
   return (
     <>
       <NavBar></NavBar>
@@ -62,15 +63,15 @@ export default function Settings() {
         <div className="toggle">
           <p className="gap">Light</p>
           <label className="switch">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={listen}
+              onChange={(e) => setListen(e.target.checked)}
+            />
             <span className="slider round"></span>
           </label>
           <p className="gap">Dark</p>
         </div>
-      </div>
-
-      <div className="save">
-        <button>Save</button>
       </div>
     </>
   );
