@@ -1,27 +1,21 @@
 .nav-bar {
-    position: sticky;
-    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
 }
 
 .nav-bar ul {
     display: flex;
-    padding: 0;  
-    border: 1px solid black;
-    border-radius: 10px;
+    justify-content: space-evenly;
+    padding: 10px;
+    list-style: none;
 }
 
-.nav-bar ul li {
-    margin: 15px;
-    list-style-type: none;
-    position: relative;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.nav-bar ul li a {
-    color: black;
-}
-
-.nav-bar a:hover {
-    color: #ddd;
+.nav-bar ul li a{
+    text-decoration: none;
+    color: #000;
+    & :active {
+        color: blue;
+        font-size: 3rem;
+    }
 }
