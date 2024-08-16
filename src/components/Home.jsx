@@ -5,15 +5,10 @@ import { useContext } from "react";
 import { UserContext } from "./UserContext.jsx";
 
 export default function Home() {
-  const { listen } = useContext(UserContext);
-
-  const getMode = () => {
-    return listen ? "dark-mode" : "light-mode";
-  };
+  const { getMode } = useContext(UserContext);
 
   return (
     <>
-      {console.log(getMode())}
       <div className={getMode()}>
         <NavBar></NavBar>
         <h1>Welcome to the Real-time Chat Application</h1>

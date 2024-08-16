@@ -9,6 +9,10 @@ export const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState([]);
   const [listen, setListen] = useState(false);
 
+  const getMode = () => {
+    return listen ? "dark-mode" : "light-mode";
+  };
+
   const registerUser = (e) => {
     e.preventDefault();
     if (name && age && address) {
@@ -31,6 +35,7 @@ export const UserProvider = ({ children }) => {
         registerUser,
         listen,
         setListen,
+        getMode,
       }}
     >
       {children}
