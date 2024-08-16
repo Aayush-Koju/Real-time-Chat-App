@@ -1,0 +1,37 @@
+.home-container {
+    border: 1px solid black;
+    margin: 20px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    height: 70vh;
+}
+
+.home-container h1 {
+    font-size: 2rem;
+}
+
+.home-container p {
+    font-size: 1.1rem;
+}
+
+.overview {
+    border: 1px solid black;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.overview h2 {
+    font-size: 1.8rem;
+}
+
+.overview ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 5px;
+    list-style: none;
+    font-size: 1.3rem;
+}

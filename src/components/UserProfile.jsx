@@ -17,7 +17,6 @@ export default function UserProfile() {
 
   return (
     <>
-      {" "}
       <div className={getMode()}>
         <NavBar></NavBar>
         <h1>User Profile Page</h1>
