@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { UserContext } from "./UserContext";
 import NavBar from "./NavBar";
+import "./UserProfile.css";
 
 export default function UserProfile() {
   const {
@@ -23,12 +24,18 @@ export default function UserProfile() {
         <div className="name">
           {userData.map((data, index) => (
             <div key={index} className="datas">
-              <span>Name</span>
-              <p>{data.name}</p>
-              <span>Age</span>
-              <p>{data.age}</p>
-              <span>Address</span>
-              <p>{data.address}</p>
+              <div className="data">
+                <p className="title">Name:</p>
+                <p>{data.name}</p>
+              </div>
+              <div className="data">
+                <p className="title">Age:</p>
+                <p>{data.age}</p>
+              </div>
+              <div className="data">
+                <p className="title">Address:</p>
+                <p>{data.address}</p>
+              </div>
             </div>
           ))}
         </div>
