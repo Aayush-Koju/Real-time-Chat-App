@@ -1,5 +1,5 @@
 .chatroom-container {
-    height: 70vh;
+    height: 75vh;
     border: 1px solid black;
     margin-top: 10px;
 }
@@ -30,12 +30,36 @@
 .create-room {
     border: 1px solid black;
     display: flex;
-    height: 60%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-room legend {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .create-room form {
     display: flex;
+    /* border: 1px solid black; */
+    height: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rooms-list {
+    display: flex;
     border: 1px solid black;
-    width: 70%;
-    height: 60%;
+    gap: 10px;
+    height: 40%;
+}
+
+.room {
+    border: 1px solid black;
+    margin: 10px;
 }
