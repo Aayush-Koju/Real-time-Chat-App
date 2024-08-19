@@ -1,3 +1,41 @@
+.chatroom-container {
+    height: 70vh;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.search-chatroom {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-chatroom input {
+    width: 30%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.search-chatroom button {
+    width: 10%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
 .create-room {
     border: 1px solid black;
+    display: flex;
+    height: 60%;
+}
+
+.create-room form {
+    display: flex;
+    border: 1px solid black;
+    width: 70%;
+    height: 60%;
 }
