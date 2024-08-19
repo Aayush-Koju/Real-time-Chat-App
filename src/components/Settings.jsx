@@ -30,49 +30,51 @@ export default function Settings() {
     <>
       <div className={getMode()}>
         <NavBar></NavBar>
-        <h1>Settings</h1>
-        <div className="profile-settings">
-          <h2>Profile Settings</h2>
-          <p>Update your credentials</p>
-          <form onSubmit={updateDetails} className="update">
-            <label>Name</label>
-            <input
-              type="text"
-              value={settingsName}
-              onChange={(e) => setSettingsName(e.target.value)}
-            />
-
-            <label>Age</label>
-            <input
-              type="number"
-              value={settingsAge}
-              onChange={(e) => setSettingsAge(e.target.value)}
-            />
-
-            <label>Address</label>
-            <input
-              type="text"
-              value={settingsAddress}
-              onChange={(e) => setSettingsAddress(e.target.value)}
-            />
-
-            <button type="submit">Save</button>
-          </form>
-        </div>
-
-        <div className="appearance-settings">
-          <h2>Appearance Settings</h2>
-          <div className="toggle">
-            <p className="gap">Light</p>
-            <label className="switch">
+        <div className="settings-container">
+          <h1>Settings</h1>
+          <div className="profile-settings">
+            <h2>Profile Settings</h2>
+            <p>Update your credentials</p>
+            <form onSubmit={updateDetails} className="update">
+              <label>Name</label>
               <input
-                type="checkbox"
-                checked={listen}
-                onChange={(e) => setListen(e.target.checked)}
+                type="text"
+                value={settingsName}
+                onChange={(e) => setSettingsName(e.target.value)}
               />
-              <span className="slider round"></span>
-            </label>
-            <p className="gap">Dark</p>
+
+              <label>Age</label>
+              <input
+                type="number"
+                value={settingsAge}
+                onChange={(e) => setSettingsAge(e.target.value)}
+              />
+
+              <label>Address</label>
+              <input
+                type="text"
+                value={settingsAddress}
+                onChange={(e) => setSettingsAddress(e.target.value)}
+              />
+
+              <button type="submit">Save</button>
+            </form>
+          </div>
+
+          <div className="appearance-settings">
+            <h2>Appearance Settings</h2>
+            <div className="toggle">
+              <p className="gap">Light</p>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={listen}
+                  onChange={(e) => setListen(e.target.checked)}
+                />
+                <span className="slider round"></span>
+              </label>
+              <p className="gap">Dark</p>
+            </div>
           </div>
         </div>
       </div>
