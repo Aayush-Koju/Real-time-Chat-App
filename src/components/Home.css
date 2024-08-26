@@ -15,7 +15,6 @@
 }
 
 .overview {
-    border: 1px solid black;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -34,4 +33,19 @@
     margin: 5px;
     list-style: none;
     font-size: 1.3rem;
+}
+
+.overview ul li {
+    border: 1px solid black;
+    padding: 5px;
+    width: 10rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.register a{
+    text-decoration: none;
 }

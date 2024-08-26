@@ -25,7 +25,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div>
+          <div className="register">
             <p>Since You have joined for the first time. Please register.</p>
 
             <Link to="/userprofile">Register</Link>
