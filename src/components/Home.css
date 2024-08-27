@@ -1,9 +1,9 @@
 .home-container {
-    border: 1px solid black;
     margin: 20px 0px;
     border-radius: 10px;
     padding: 20px;
     height: 70vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .home-container h1 {
@@ -36,7 +36,6 @@
 }
 
 .overview ul li {
-    border: 1px solid black;
     padding: 5px;
     width: 10rem;
     height: 12rem;
@@ -44,6 +43,8 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 15px;
+    background-color: #dbdbdb;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .register a{
