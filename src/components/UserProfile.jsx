@@ -20,51 +20,59 @@ export default function UserProfile() {
     <>
       <div className={getMode()}>
         <NavBar></NavBar>
-        <h1>User Profile Page</h1>
-        <div className="name">
-          {userData.map((data, index) => (
-            <div key={index} className="datas">
-              <div className="data">
-                <p className="title">Name:</p>
-                <p>{data.name}</p>
-              </div>
-              <div className="data">
-                <p className="title">Age:</p>
-                <p>{data.age}</p>
-              </div>
-              <div className="data">
-                <p className="title">Address:</p>
-                <p>{data.address}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="user-profile-container">
+          <h1>User Profile Page</h1>
 
-        <div className="user-register">
-          <form onSubmit={registerUser}>
-            <label>Name</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            ></input>
+          <div className="name">
+            {userData.length === 0 ? (
+              <div className="default-message">No Data Available</div>
+            ) : (
+              userData.map((data, index) => (
+                <div key={index} className="datas">
+                  <div className="data">
+                    <p className="title">Name:</p>
+                    <p>{data.name}</p>
+                  </div>
+                  <div className="data">
+                    <p className="title">Age:</p>
+                    <p>{data.age}</p>
+                  </div>
+                  <div className="data">
+                    <p className="title">Address:</p>
+                    <p>{data.address}</p>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
 
-            <label>Age</label>
-            <input
-              type="number"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-            ></input>
+          <div className="user-register">
+            <p>Register</p>
+            <form onSubmit={registerUser}>
+              <label>Name</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              ></input>
 
-            <label>Address</label>
-            <input
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            ></input>
+              <label>Age</label>
+              <input
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+              ></input>
 
-            <button type="submit">Submit</button>
-          </form>
+              <label>Address</label>
+              <input
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+              ></input>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </>

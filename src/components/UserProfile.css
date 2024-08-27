@@ -1,6 +1,24 @@
+.user-profile-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
 .name {
-    border: 1px solid black;
-    padding: 10px;
+    padding: 20px;
+    height: 25%;
+    width: 40%;
+    background-color: #dbdbdb;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.default-message {
+    font-size: 1.5rem;
 }
 
 .datas {
@@ -20,17 +38,40 @@
 }
 
 .user-register {
-    border: 1px solid black;
-    margin-top: 10px;
-    padding: 10px;
-    height: 30vh;
+    margin-top: 20px;
+    padding: 20px;
+    height: 50%;
+    width: 40%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
+    background-color: #dbdbdb;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.user-register p {
+    font-size: 1.5rem;
 }
 
 .user-register form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.user-register form input {
+    padding: 5px;
+    margin: 5px;
+    width: 70%;
+    border-radius: 20px;
+    border: none;
+}
+
+.user-register form button {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
 }
